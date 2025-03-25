@@ -1,16 +1,46 @@
-# sprints_flutter_task_16
+# Flutter Factory Pattern Demo
 
-A new Flutter project.
+This Flutter project demonstrates the implementation of the Factory Design Pattern using different geometric shapes.
+
+## Project Overview
+
+This project showcases how to implement the Factory Design Pattern in Flutter/Dart. The Factory Pattern is a creational pattern that provides an interface for creating objects but allows subclasses to alter the type of objects that will be created.
+
+### Project Structure
+
+- `lib/`
+  - `main.dart` - Entry point of the application
+  - `factory.dart` - Contains the ShapeFactory implementation
+  - `shape.dart` - Abstract shape class
+  - `circle.dart` - Circle shape implementation
+  - `square.dart` - Square shape implementation
+  - `rectangle.dart` - Rectangle shape implementation
+
+### Design Pattern Implementation
+
+The project uses the Factory Pattern with the following components:
+
+1. `Shape` - Abstract base class for all shapes
+2. `ShapeFactory` - Factory class that creates different shape objects
+3. Concrete shape classes:
+   - `Circle`
+   - `Square`
+   - `Rectangle`
+
+### Usage
+
+The factory can be used to create different shapes as follows:
+
+```dart
+final shape = ShapeFactory();
+shape.getShape("circle").revealMe();
+shape.getShape("square").revealMe();
+shape.getShape("rectangle").revealMe();
+```
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+1. Ensure you have Flutter installed on your machine
+2. Clone this repository
+3. Run `flutter pub get` to install dependencies
+4. Run the project using `flutter run`
